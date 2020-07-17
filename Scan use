@@ -1,0 +1,28 @@
+package main
+
+import "fmt"
+
+func main() {
+	var task1, task2, task3 string
+
+	fmt.Print("Name: ")
+	_, err := fmt.Scan(&task1)
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Print("Fav Series ")
+	_, err = fmt.Scan(&task2)
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Print("Fav Game: ")
+	_, err = fmt.Scan(&task3)
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Println(task1, task2, task3)
+
+}
