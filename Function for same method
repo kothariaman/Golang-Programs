@@ -1,0 +1,31 @@
+package main
+
+import (
+	"fmt"
+	"math"
+  "log"
+)
+
+type AP struct {
+	A, D float64
+}
+
+func (ap AP) NthTerm(n int) float64 {
+	return ap.A + float64(n-1)*ap.D
+}
+
+type GP struct {
+	A, R float64
+}
+
+func (gp GP) NthTerm(n int) float64 {
+	return gp.A * math.Pow(gp.R, float64(n-1))
+}
+
+func main() {
+	ap := AP{1, 2} 
+	gp := GP{1, 2}  
+
+	fmt.Println("5th Term of the Arithmetic series = ", ap.NthTerm(5))
+	fmt.Println("5th Term of the Geometric series = ", gp.NthTerm(5))
+}
