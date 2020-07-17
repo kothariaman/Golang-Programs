@@ -26,6 +26,6 @@ func main() {
 	ap := AP{1, 2} 
 	gp := GP{1, 2}  
 
-	fmt.Println("5th Term of the Arithmetic series = ", ap.NthTerm(5))
-	fmt.Println("5th Term of the Geometric series = ", gp.NthTerm(5))
+	log.Println("5th Term of the Arithmetic series = ", ap.NthTerm(5))
+	log.Println("5th Term of the Geometric series = ", gp.NthTerm(5))
 }
